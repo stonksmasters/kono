@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOMO Ai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img id="logo" src="logo.png" alt="KOMO Ai Logo">
+                <span class="logo-text">KOMO Ai</span>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#membership">Membership</a></li>
+                    <li><a href="#free-bots">Free Ai Helper Bots</a></li>
+                    <li><a href="#promotions">Promotions</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content container">
+            <h1>Welcome to KOMO Ai</h1>
+            <p>Unlock the power of AI with our exclusive membership and free AI helper bots.</p>
+            <div class="cta-buttons">
+                <button onclick="window.location.href='#membership'">Join Membership</button>
+                <button onclick="window.location.href='#free-bots'">Explore Free Bots</button>
+                <button onclick="window.location.href='#about'">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Overview -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose KOMO Ai?</h2>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Membership Only Website</h3>
+                    <p>Exclusive access to custom AI bots and tools.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Free to Use AI Helper Bots</h3>
+                    <p>Explore our collection of always-available AI helper bots.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Promotions and Sales</h3>
+                    <p>Special offers and events with great deals and giveaways.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Section -->
+    <section id="membership" class="membership">
+        <div class="container">
+            <h2>Membership Benefits</h2>
+            <p>Become a member and enjoy exclusive benefits:</p>
+            <ul class="benefits-list">
+                <li>Access to Custom AI Bots at a discounted rate.</li>
+                <li>Browse and share AI artwork and stories.</li>
+                <li>Use Members-Only AI Helper Bots.</li>
+                <li>Access to an Overlay and Meme Creator.</li>
+            </ul>
+            <h3>Future Plans</h3>
+            <p>We're continuously developing new features like individual profiles, sharing AI art, and more.</p>
+            <h3>Pricing & Signup</h3>
+            <p>Choose the plan that suits you best and sign up to unlock all these benefits.</p>
+        </div>
+    </section>
+
+    <!-- Free AI Helper Bots Section -->
+    <section id="free-bots" class="free-bots">
+        <div class="container">
+            <h2>Free AI Helper Bots</h2>
+            <div class="bots-list">
+                <div class="bot-item">
+                    <h3>Helper Bot 1</h3>
+                    <p>Description of what this bot can do.</p>
+                </div>
+                <div class="bot-item">
+                    <h3>Helper Bot 2</h3>
+                    <p>Description of what this bot can do.</p>
+                </div>
+                <div class="bot-item">
+                    <h3>Helper Bot 3</h3>
+                    <p>Description of what this bot can do.</p>
+                </div>
+            </div>
+            <h3>How It Works</h3>
+            <p>Getting started with our free AI helper bots is easy. Just follow the simple steps and start exploring.</p>
+            <h3>User Testimonials</h3>
+            <p>Read stories from users who have benefited from our free bots.</p>
+        </div>
+    </section>
+
+    <!-- Promotion/Sales Table Section -->
+    <section id="promotions" class="promotions">
+        <div class="container">
+            <h2>Promotions & Sales</h2>
+            <p>Stay up to date with our latest events, promotions, and merchandise sales.</p>
+            <div class="promo-list">
+                <div class="promo-item">
+                    <h3>Event Information</h3>
+                    <p>Join us at local pop-up events with QR codes, promotions, and exclusive merchandise.</p>
+                </div>
+                <div class="promo-item">
+                    <h3>Merchandise & Freebies</h3>
+                    <p>Check out our fun merchandise and freebies available at our events.</p>
+                </div>
+                <div class="promo-item">
+                    <h3>Donation Box</h3>
+                    <p>Your donations help support the development of new features and AI bots. Thank you for your support!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About KOMO Ai</h2>
+            <p>Our mission is to empower individuals with cutting-edge AI tools and resources.</p>
+            <h3>Our Team</h3>
+            <p>Meet the team behind KOMO Ai, dedicated to providing innovative AI solutions.</p>
+            <h3>Our Story</h3>
+            <p>KOMO Ai was founded with the vision of making AI accessible to everyone. Learn more about our journey and future goals.</p>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
+                <input type="hidden" name="bot-field" />
+                <input type="hidden" name="form-name" value="contact" />
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+            <div class="contact-info">
+                <p>Email: support@komoai.com</p>
+                <p>Phone: (555) 123-4567</p>
+                <p>Follow us on social media:</p>
+                <div class="footer-social">
+                    <a href="https://www.x.com" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#membership">Membership</a>
+                <a href="#free-bots">Free Bots</a>
+                <a href="#promotions">Promotions</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.x.com" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+                </a>
+            </div>
+            <p>&copy; 2024 KOMO Ai. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+            <div class="newsletter-signup">
+                <label for="newsletter-email">Sign up for our newsletter:</label>
+                <input type="email" id="newsletter-email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
