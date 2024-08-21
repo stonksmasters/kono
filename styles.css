@@ -68,6 +68,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
 
 header .logo-container {
@@ -93,11 +94,12 @@ header .nav-menu li a {
     font-size: 1rem;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 header .nav-menu li a:hover {
     background-color: var(--highlight-color);
+    transform: scale(1.05);
 }
 
 /* Hero Section */
@@ -110,16 +112,36 @@ header .nav-menu li a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    line-height: 1.5;
+    max-width: 90%;
 }
 
 .cta-buttons {
@@ -128,6 +150,7 @@ header .nav-menu li a:hover {
     align-items: center;
     gap: 1rem;
     width: 100%;
+    max-width: 400px;
 }
 
 .cta-buttons button {
@@ -149,20 +172,20 @@ header .nav-menu li a:hover {
 }
 
 /* Features Section */
-.features, .membership, .free-bots, .promotions, .about, .contact {
+.features {
     background-color: var(--background-color);
     padding: 3rem 1rem;
     text-align: center;
 }
 
-.features h2, .membership h2, .free-bots h2, .promotions h2, .about h2, .contact h2 {
-    font-size: var(--font-size-h2);
+.features h2 {
+    font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
     position: relative;
 }
 
-.features h2::after, .membership h2::after, .free-bots h2::after, .promotions h2::after, .about h2::after, .contact h2::after {
+.features h2::after {
     content: '';
     width: 50px;
     height: 4px;
@@ -172,11 +195,31 @@ header .nav-menu li a:hover {
     border-radius: 2px;
 }
 
-.features .feature-list, .free-bots .bots-list, .promotions .promo-list {
+.features .feature-list {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
+}
+
+.feature-item {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.feature-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+.feature-item p {
+    font-size: 1rem;
 }
 
 /* Feature Items */
@@ -197,6 +240,158 @@ header .nav-menu li a:hover {
 }
 
 .feature-item p, .bot-item p, .promo-item p {
+    font-size: 1rem;
+}
+/* Membership Section */
+.membership {
+    background-color: var(--background-color);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.membership h2, .membership h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.membership p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.benefits-list, .future-plans-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.benefits-list li, .future-plans-list li {
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.benefits-list li:hover, .future-plans-list li:hover {
+    background-color: var(--accent-color);
+}
+
+/* Free Bots Section */
+.free-bots {
+    background-color: var(--background-color);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.free-bots h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.free-bots h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: var(--highlight-color);
+    display: block;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.free-bots p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.bots-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.bot-item {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.bot-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+.bot-item p {
+    font-size: 1rem;
+}
+/* Promotions Section */
+.promotions {
+    background-color: var(--background-color);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.promotions h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.promotions h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: var(--highlight-color);
+    display: block;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.promotions p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
+.promo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.promo-item {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.promo-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--highlight-color);
+}
+
+.promo-item p {
     font-size: 1rem;
 }
 
@@ -244,7 +439,36 @@ ul li strong {
     color: var(--highlight-color);
 }
 
-/* Contact Form */
+/* Contact Section */
+.contact {
+    background-color: var(--background-color);
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.contact h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: var(--highlight-color);
+    display: block;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+}
+
 .contact form {
     display: flex;
     flex-direction: column;
@@ -357,35 +581,15 @@ footer p {
     gap: 0.5rem;
 }
 
-.newsletter-signup {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.newsletter-signup input {
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 80%;
-}
-
-.newsletter-signup button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--highlight-color);
+.footer-legal a {
     color: var(--background-color);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 80%;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
 }
 
-.newsletter-signup button:hover {
-    background-color: var(--accent-color);
+.footer-legal a:hover {
+    color: var(--highlight-color);
 }
 
 /* Media Queries */
